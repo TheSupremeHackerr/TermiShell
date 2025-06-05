@@ -1,0 +1,12 @@
+[
+  {
+    "id": "intro-nmap",
+    "title": "Introducción a nmap",
+    "file": "intro-nmap.md"
+  },
+  {
+    "id": "intro-tcpdump",
+    "title": "Primeros pasos con tcpdump",
+    "file": "intro-tcpdump.md"
+  }
+]
