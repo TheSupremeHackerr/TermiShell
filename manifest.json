@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "TermiShell",
+  "version": "1.0",
+  "description": "Ejecuta comandos de Linux directamente en el navegador usando WebContainer",
+  "icons": {
+    "128": "icons/terminal.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/terminal.png"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"]
+}
