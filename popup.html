@@ -3,35 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <title>💻 TermiShell</title>
-  <style>
-    body {
-      width: 400px;
-      padding: 10px;
-      background-color: #1e1e1e;
-      color: #00ff00;
-      font-family: monospace;
-      font-size: 14px;
-    }
-    input, button {
-      width: 100%;
-      padding: 5px;
-      margin-top: 10px;
-      font-family: monospace;
-    }
-    pre {
-      background: #000;
-      padding: 10px;
-      border-radius: 5px;
-      height: 200px;
-      overflow-y: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h3>💻 TermiShell</h3>
-  <pre id="output">Cargando...</pre>
-  <input type="text" id="cmd" placeholder="Ejemplo: nmap -sT google.com" />
-  <button onclick="runCommand()">Ejecutar</button>
+  <div class="header">
+    <h3>💻 TermiShell</h3>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌙</button>
+      <button onclick="clearOutput()">🗑️</button>
+      <button onclick="showHelp()">❓</button>
+    </div>
+  </div>
+
+  <div id="output">
+    <p><span class="prompt">$</span> Bienvenido. Escribe 'help' o usa las teclas ↑↓ para navegar.</p>
+  </div>
+
+  <input type="text" id="cmd" autofocus autocomplete="off" placeholder="Ejemplo: nmap -sT google.com..." />
+
+  <!-- Sidebar educativo -->
+  <div id="sidebar">
+    <h4>Ayuda contextual</h4>
+    <p id="context-help">Selecciona un comando para ver su explicación.</p>
+  </div>
 
   <script src="https://unpkg.com/@webcontainer/core@latest/dist/webcontainer-core.min.js"></script> 
   <script src="terminal.js"></script>
