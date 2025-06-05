@@ -1,0 +1,68 @@
+body {
+  width: 600px;
+  height: 400px;
+  font-family: monospace;
+  background-color: #1e1e1e;
+  color: #00ff00;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  padding: 10px;
+  background: #111;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  white-space: pre-wrap;
+  background-color: #000;
+  height: 300px;
+}
+
+#cmd {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: #0f0;
+  font-family: monospace;
+}
+
+#sidebar {
+  width: 200px;
+  background: #222;
+  padding: 10px;
+  border-left: 1px solid #333;
+}
+
+.prompt {
+  color: #00ffff;
+}
+
+/* Theme light */
+body.light {
+  background: #fff;
+  color: #000;
+}
+body.light .controls button { color: #000; }
+body.light #output { background: #eee; }
+body.light #cmd { background: #ddd; color: #000; }
+body.light #sidebar { background: #f4f4f4; }
