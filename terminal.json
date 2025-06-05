@@ -1,0 +1,36 @@
+let container;
+
+async function init() {
+  try {
+    container = await WebContainer.boot();
+    document.getElementById("output").innerText = "✅ Listo. Escribe un comando.";
+  } catch (err) {
+    document.getElementById("output").innerText = "❌ Error al iniciar WebContainer.";
+    console.error(err);
+  }
+}
+
+async function runCommand() {
+  const input = document.getElementById("cmd").value.trim();
+  const output = document.getElementById("output");
+
+  if (!container) {
+    output.innerText = "⚠️ Error: Entorno no iniciado.";
+    return;
+  }
+
+  output.innerText = "🔄 Ejecutando...";
+  try {
+    const args = input.split(" ");
+    const command = args[0];
+    const params = args.slice(1);
+
+    const result = await container.spawn(command, params);
+    output.innerText = result.stdout || result.stderr;
+  } catch (err) {
+    output.innerText = "❌ Error al ejecutar el comando.";
+    console.error(err);
+  }
+}
+
+init();
