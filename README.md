@@ -1,5 +1,5 @@
 # TermiShell 💻  
-**Ejecuta comandos de Linux directamente en tu navegador con WebContainer
+**Ejecuta comandos de Linux directamente en tu navegador con WebContainer**
 
 TermiShell es una **extensión de Chrome** que te permite ejecutar comandos reales de Linux como `nmap`, `ping`, `tcpdump` y más desde una terminal integrada en el navegador. Ideal para aprendizaje de hacking ético, administración de redes o simplemente probar comandos sin salir de tu sesión.
 
